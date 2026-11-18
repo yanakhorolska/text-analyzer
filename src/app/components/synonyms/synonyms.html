@@ -1,0 +1,35 @@
+<section class="synonyms-section">
+  <h2>Synonyms</h2>
+
+  @if (!selectedText()) {
+    <p>Select a word or phrase to find synonyms.</p>
+  } @else {
+    <p>
+      Selected: <strong>{{ selectedText() }}</strong>
+    </p>
+
+    <button type="button" (click)="findSynonyms()" [disabled]="loading()">
+      {{ loading() ? 'Searching...' : 'Find synonyms' }}
+    </button>
+  }
+
+  @if (searchedVersion() === selectionVersion()) {
+    @if (error()) {
+      <p class="error">{{ error() }}</p>
+    }
+
+    @if (synonyms().length > 0 && selectedText()) {
+      <ul>
+        @for (synonym of synonyms(); track synonym.word) {
+          <li>
+            <button type="button" (click)="replace.emit(synonym.word)">
+              {{ synonym.word }}
+            </button>
+          </li>
+        }
+      </ul>
+    } @else if (!error() && selectedText()) {
+      <p>No synonyms found.</p>
+    }
+  }
+</section>

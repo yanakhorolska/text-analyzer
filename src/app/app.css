@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+}
+.main {
+  display: grid;
+  width: 100%;
+  max-width: 1200px;
+  gap: 24px;
+  grid-template-columns: 2fr 1fr;
+  margin: 0 auto;
+  padding: 24px;
+}
+.app-header {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 28px 0 12px;
+}
+.editor-section {
+  padding: 24px;
+  background-color: #172e27;
+  border-radius: 12px;
+  min-width: 0;
+  box-shadow: 0 18px 45px rgba(23, 46, 39, 0.12);
+}
+.editor-section label {
+  display: block;
+  color: #b8c5bc;
+}
+.text-editor {
+  width: 100%;
+  min-height: 250px;
+  padding: 16px;
+  background-color: #101c18;
+  color: aliceblue;
+  border-radius: 8px;
+}
+.text-stats {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+  color: #b8c5bc;
+}
+.editor-actions {
+  display: flex;
+  gap: 12px;
+}
+.editor-actions button {
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background-color: #386e48;
+  color: #ffffff;
+  transition: background-color 200ms ease-out;
+}
+.editor-actions button:hover {
+  background-color: #2c5037;
+}
+.editor-actions button:focus-visible {
+  outline: 2px solid #d4b978;
+  outline-offset: 3px;
+}
+
+@media (max-width: 768px) {
+  .app-header {
+    padding: 16px 0;
+  }
+
+  .brand-label {
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+
+  .app-header p {
+    font-size: 13px;
+  }
+}
+.main {
+  padding: 32px 24px;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(40px, 5vw, 62px);
+  font-weight: 600;
+  letter-spacing: -1.5px;
+  line-height: 1.2;
+  color: #172e27;
+}
+.app-header h1 span {
+  color: #a28249;
+  font-style: italic;
+}
+
+.app-header p {
+  margin: 14px 0 0;
+  color: #6c7b6f;
+  font-size: 15px;
+  letter-spacing: 0.3px;
+}
+
+.editor-actions {
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.text-editor {
+  border: 1px solid #52665c;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.text-editor:focus {
+  outline: 2px solid #78a88a;
+  outline-offset: 2px;
+}
+.brand-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 14px;
+  color: #977744;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+.brand-line {
+  width: 32px;
+  height: 1px;
+  background-color: #b59658;
+}
