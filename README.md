@@ -27,3 +27,4 @@ Open `http://localhost:4200/` in your browser.
 ## Note
 
 Synonym availability depends on the Datamuse API. Some phrases may not return results. Browser-based requests may also be affected by CORS restrictions.
+<img width="1333" height="740" alt="image" src="https://github.com/user-attachments/assets/98f334c2-811b-407e-940e-038801b8b161" />
